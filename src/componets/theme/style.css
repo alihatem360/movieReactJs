@@ -1,0 +1,13 @@
+#theme .form-switch {
+  font-size: 30px;
+}
+#theme .form-switch label .fa-sun {
+  color: #f1c40f;
+}
+#theme .form-switch label .fa-moon {
+  color: #fff;
+}
+#theme .form-switch input:focus {
+  outline: none;
+  box-shadow: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 8px 10px;
+    a {
+      display: block;
+      padding: 10px;
+
+      border-radius: 7px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      background-color: #ffb200;
+      outline: none;
+      &:hover {
+        background-color: #ccc;
+        outline: none;
+        box-shadow: none;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

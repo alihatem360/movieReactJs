@@ -1,0 +1,21 @@
+#CatigoriseNav {
+  background-color: #456;
+}
+#CatigoriseNav .navbar-collapse ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#CatigoriseNav .navbar-collapse ul li {
+  width: 10%;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px;
+  margin: auto 14px;
+}
+#CatigoriseNav .navbar-collapse ul li a {
+  color: #fff;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

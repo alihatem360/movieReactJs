@@ -1,0 +1,28 @@
+.card-img-top {
+  height: 629px;
+}
+
+#movieDetails .container .col-lg-6:nth-child(2) p {
+  line-height: 33px;
+  margin: 19px 0 0 0;
+  font-size: 21px;
+}
+
+#movieDetails .container .col-lg-6:nth-child(2) p span {
+  display: block;
+  margin: 22px 0 0 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#movieDetails .container .col-lg-6:nth-child(2) h5 {
+  font-family: cursive;
+  font-weight: 800;
+  font-size: 31px;
+  text-transform: capitalize;
+}
+
+#movieDetails .container .col-lg-6:nth-child(1) img {
+  border-radius: 12px;
+}
