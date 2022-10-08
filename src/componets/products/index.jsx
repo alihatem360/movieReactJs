@@ -42,16 +42,21 @@ const index = () => {
               </h3>
               {catigorise} <i class="fa-solid fa-clapperboard"></i>
             </h1>
-            {/* <Filter /> */}
-
-            <div className="row">
-              {FilterResult.map((product, index) => {
-                return (
-                  <div className="col-lg-3" key={product.id}>
-                    <ProdctItem product={product} />
-                  </div>
-                );
-              })}
+            <Filter />
+            <div
+              className={`
+      ${FilterResult.length === movies.length ? "d-none" : "d-block"}
+`}
+            >
+              <div className="row">
+                {FilterResult.map((product, index) => {
+                  return (
+                    <div className="col-lg-3" key={product.id}>
+                      <ProdctItem product={product} />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="row">

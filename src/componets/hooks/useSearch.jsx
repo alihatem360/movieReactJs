@@ -11,10 +11,9 @@ const useSearch = () => {
   console.log("Fiter" + FilterResult);
   const handleSearch = (e) => {
     setSearch(e);
-    console.log("search" + " " + e.length);
 
     if (e === "" || e.length === 0) {
-      console.log("search" + " " + e.length);
+      setFilterResult([]);
     } else {
       const result = movies.filter((movie) =>
         movie.title.toLowerCase().includes(e.toLowerCase())
