@@ -24,7 +24,7 @@ const PagesNav = () => {
               href="#"
               tabindex="-1"
               aria-disabled="true"
-              onClick={() => setPage(page - 1)}
+              onClick={() => setPage(page > 1 ? page - 1 : page)}
             >
               <i class="fa-solid fa-backward"></i> Previous
             </a>

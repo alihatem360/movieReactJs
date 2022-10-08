@@ -4,7 +4,7 @@ import Theme from "../theme";
 import "./index.css";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
-
+import Search from "../search/index";
 // import { useContext } from "react";
 // import { ThemeContext } from "../../App";
 
@@ -44,6 +44,24 @@ function Navbar() {
                     className={`${themeValue === "light" ? "" : " text-light"}`}
                   >
                     movies <i class="fa-solid fa-video"></i>
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link
+                    to="/search"
+                    className={`${
+                      themeValue === "light" ? "" : " text-light "
+                    }`}
+                  >
+                    <span
+                      className={` btn
+                    ${themeValue === "light" ? "text-dark" : "text-light "}
+                    `}
+                    >
+                      {" "}
+                      <i class="fa-solid fa-magnifying-glass"></i> search
+                    </span>
                   </Link>
                 </li>
 

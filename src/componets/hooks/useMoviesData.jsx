@@ -17,7 +17,9 @@ const useMoviesData = () => {
   const [page, setPage] = useState(2);
 
   const key = "9bde724434cd2ef83bccc262c14d0248&language";
-  const url = `https://api.themoviedb.org/3/movie/${catigorise}?api_key=${key}=en-US&page=${page}`;
+  const url = `https://api.themoviedb.org/3/movie/${catigorise}?api_key=${key}=en-US&page=${
+    page > 0 ? page : 2
+  }`;
 
   useEffect(() => {
     setLoading(true);

@@ -1,0 +1,18 @@
+#search {
+  height: 100vh;
+  width: 100%;
+}
+#search .row {
+  padding: 0px;
+  margin: 0px;
+}
+#search input {
+  padding: 7px;
+  font-size: 19px;
+  outline: none;
+  box-shadow: none;
+  font-weight: 600;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 28px;
+}/*# sourceMappingURL=style.css.map */

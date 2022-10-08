@@ -16,3 +16,20 @@
 
 #navbarSupportedContent .navbar-nav {
 }
+
+.navbar-nav .nav-item:nth-child(2) {
+  margin: 0 0 0 20px;
+  width: 72%;
+}
+
+.navbar-nav .nav-item:nth-child(2) span {
+  margin: 0 0 0 20px;
+  width: 72%;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* padding: 0;
+font-size: 22px;
+font-weight: 500; */
