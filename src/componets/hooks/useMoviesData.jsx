@@ -11,11 +11,11 @@ import axios from "axios";
 
 const useMoviesData = () => {
   const [movies, setMovies] = useState([]);
+  const [FilterResult, setFilterResult] = useState([]);
   const [loading, setLoading] = useState(true);
   const [catigorise, setCatigorise] = useState("now_playing");
   const [page, setPage] = useState(2);
-  console.log("pages", page);
-  console.log("catigorise value  " + " " + catigorise);
+
   const key = "9bde724434cd2ef83bccc262c14d0248&language";
   const url = `https://api.themoviedb.org/3/movie/${catigorise}?api_key=${key}=en-US&page=${page}`;
 
@@ -35,6 +35,8 @@ const useMoviesData = () => {
     setCatigorise,
     page,
     setPage,
+    FilterResult,
+    setFilterResult,
   };
 };
 

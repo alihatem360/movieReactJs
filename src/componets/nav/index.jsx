@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Theme from "../theme";
 import "./index.css";
-
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 

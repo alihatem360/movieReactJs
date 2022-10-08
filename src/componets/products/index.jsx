@@ -1,14 +1,23 @@
 import ProdctItem from "../productItem/index";
-import axios from "axios";
-//  import { ThemeContext , MovieContext } from "../../App";
+
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../App";
 import { MovieContext } from "../../App";
+import Filter from "../filter/index";
 
 const index = () => {
   const { themeValue } = useContext(ThemeContext);
-  const { movies, loading, setLoading, setMovies, catigorise, page } =
-    useContext(MovieContext);
+  const {
+    movies,
+    loading,
+    setLoading,
+    setMovies,
+    catigorise,
+    page,
+    FilterResult,
+  } = useContext(MovieContext);
+
+  console.log("Filter" + FilterResult);
 
   return (
     <div className={`${themeValue === "light" ? "bg-light" : "bg-dark"}`}>
@@ -33,6 +42,17 @@ const index = () => {
               </h3>
               {catigorise} <i class="fa-solid fa-clapperboard"></i>
             </h1>
+            <Filter />
+
+            <div className="row">
+              {FilterResult.map((product, index) => {
+                return (
+                  <div className="col-lg-3" key={product.id}>
+                    <ProdctItem product={product} />
+                  </div>
+                );
+              })}
+            </div>
 
             <div className="row">
               {movies.map((product, index) => {
