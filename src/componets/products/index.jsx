@@ -59,14 +59,20 @@ const index = () => {
               </div>
             </div>
 
-            <div className="row">
-              {movies.map((product, index) => {
-                return (
-                  <div className="col-lg-3" key={product.id}>
-                    <ProdctItem product={product} />
-                  </div>
-                );
-              })}
+            <div
+              className={`
+      ${FilterResult.length > 0 ? "d-none" : "d-block"}
+           `}
+            >
+              <div className="row">
+                {movies.map((product, index) => {
+                  return (
+                    <div className="col-lg-3" key={product.id}>
+                      <ProdctItem product={product} />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </>
         )}
