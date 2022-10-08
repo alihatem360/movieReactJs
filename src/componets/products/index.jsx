@@ -42,7 +42,7 @@ const index = () => {
               </h3>
               {catigorise} <i class="fa-solid fa-clapperboard"></i>
             </h1>
-            <Filter />
+            {/* <Filter /> */}
 
             <div className="row">
               {FilterResult.map((product, index) => {
