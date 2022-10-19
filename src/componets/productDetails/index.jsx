@@ -6,7 +6,7 @@ import UnknwonImage from "../../assets/undraw_netflix_q-00-o.svg";
 import "./index.css";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
-import VideoList from "../videoList";
+
 
 function index() {
   const { id } = useParams();
