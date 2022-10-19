@@ -6,24 +6,41 @@ import UnknwonImage from "../../assets/undraw_netflix_q-00-o.svg";
 import "./index.css";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
+import VideoList from "../videoList";
+
 function index() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
+  const [listVideos, setListVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const { themeValue } = useContext(ThemeContext);
   const key = "9bde724434cd2ef83bccc262c14d0248&language";
-  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=9bde724434cd2ef83bccc262c14d0248&language=en-US`;
+  const BaseUrl = "https://api.themoviedb.org/3/movie";
   const imageUrl = "https://image.tmdb.org/t/p/w500/";
 
   useEffect(() => {
     setLoading(true);
-    axios.get(url).then((res) => {
-      setMovieDetails(res.data);
+    axios
+      .get(BaseUrl + "/" + id + "?api_key=" + key + "&language=en-US")
+      .then((res) => {
+        setMovieDetails(res.data);
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    setLoading(true);
+    axios.get(BaseUrl + "/" + id + "/videos?api_key=" + key).then((res) => {
+      for (let i = 0; i < res.data.results.length; i++) {
+        if (res.data.results[i].site === "YouTube") {
+          setListVideos((prev) => [...prev, res.data.results[i]]);
+        }
+      }
       setLoading(false);
     });
   }, []);
 
-  console.log(movieDetails);
+  console.log(listVideos);
 
   return (
     <div
@@ -56,6 +73,30 @@ function index() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div
+            className={`VideoList ${
+              themeValue === "light" ? "" : "bg-dark text-light"
+            }`}
+          >
+            {listVideos.map((video) => {
+              return (
+                <>
+                  {/* <h1>Sorry, there is no video for this movie, please try</h1> */}
+
+                  <iframe
+                    width="560"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${video.key}`}
+                    title={video.name}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </>
+              );
+            })}
           </div>
         </>
       )}

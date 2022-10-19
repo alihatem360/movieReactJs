@@ -3,21 +3,19 @@ import "./style.css";
 
 import { MovieContext } from "../../App";
 import { ThemeContext } from "../../App";
-
+import CatigoriseNav from "../catigoriesNav";
 const PagesNav = () => {
-  const pages = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  ];
+  const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const { setPage, page } = useContext(MovieContext);
   const { themeValue } = useContext(ThemeContext);
 
   return (
-    <div>
+    <div
+      id="PagesNav"
+      className={`pagination ${themeValue === "dark" ? "bg-dark" : ""}`}
+    >
       <nav aria-label="...">
-        <ul
-          className={`pagination ${themeValue === "dark" ? "bg-dark" : ""}`}
-          id="pagination"
-        >
+        <ul id="pagination">
           <li class="page-item ">
             <a
               class="page-link"
@@ -51,6 +49,18 @@ const PagesNav = () => {
           </li>
         </ul>
       </nav>
+
+      <div id="CatigoriseNav">
+        <CatigoriseNav />
+      </div>
+
+      <span
+        className={`badge ${
+          themeValue === "dark" ? " text-light" : "text-dark"
+        }`}
+      >
+        page : {page}
+      </span>
     </div>
   );
 };

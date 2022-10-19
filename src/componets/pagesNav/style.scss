@@ -30,3 +30,18 @@
     }
   }
 }
+
+#PagesNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+
+  span {
+    text-align: center;
+    font-size: 22px;
+
+    padding: 15px;
+  }
+}

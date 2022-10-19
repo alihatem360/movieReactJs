@@ -5,9 +5,7 @@ import RouteComponent from "./componets/rout";
 import { BrowserRouter } from "react-router-dom";
 import useTheme from "./componets/hooks/useTheme";
 import useMoviesData from "./componets/hooks/useMoviesData";
-import CatigoriseNav from "./componets/catigoriesNav";
 import PagesNav from "./componets/pagesNav";
-// import useSearch from "./componets/hooks/useSearch";
 export const ThemeContext = createContext();
 export const MovieContext = createContext();
 
@@ -46,7 +44,6 @@ function App() {
               setFilterResult,
             }}
           >
-            <CatigoriseNav />
             <PagesNav />
             <RouteComponent />
           </MovieContext.Provider>

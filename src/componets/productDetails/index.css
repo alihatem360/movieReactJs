@@ -1,11 +1,19 @@
 .card-img-top {
   height: 629px;
 }
-
+#movieDetails {
+  height: 100%;
+}
 #movieDetails .container .col-lg-6:nth-child(2) p {
   line-height: 33px;
   margin: 19px 0 0 0;
   font-size: 21px;
+}
+
+#movieDetails .container .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #movieDetails .container .col-lg-6:nth-child(2) p span {
@@ -25,4 +33,19 @@
 
 #movieDetails .container .col-lg-6:nth-child(1) img {
   border-radius: 12px;
+}
+
+#movieDetails .VideoList {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+#movieDetails .VideoList iframe {
+  width: 45%;
+  margin: 33px;
 }

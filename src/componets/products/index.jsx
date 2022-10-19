@@ -20,7 +20,7 @@ const index = () => {
   console.log("Filter" + FilterResult);
 
   return (
-    <div className={`${themeValue === "light" ? "bg-light" : "bg-dark"}`}>
+    <div className={`h-100 ${themeValue === "light" ? "bg-light" : "bg-dark"}`}>
       <div className="container ">
         {loading ? (
           <h1
@@ -30,18 +30,6 @@ const index = () => {
           </h1>
         ) : (
           <>
-            <h1
-              className={
-                themeValue === "light"
-                  ? "text-dark py-4 text-center"
-                  : "text-light py-4 text-center"
-              }
-            >
-              <h3 className="">
-                <span class="badge bg-secondary">{page}</span>
-              </h3>
-              {catigorise} <i class="fa-solid fa-clapperboard"></i>
-            </h1>
             <Filter />
             <div
               className={`

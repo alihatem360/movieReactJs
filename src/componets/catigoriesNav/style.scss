@@ -1,23 +1,10 @@
-#CatigoriseNav {
-  background-color: #456;
-  .navbar-collapse {
-    ul {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      li {
-        width: 10%;
+#CatigoriseNavComponet {
+  margin: 10px 0 0 0;
+  text-transform: capitalize;
 
-        text-align: center;
-        padding: 10px;
-        margin: auto 14px;
-
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
-      }
+  .dropdown {
+    button {
+      text-transform: capitalize;
     }
   }
 }

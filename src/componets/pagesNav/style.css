@@ -28,4 +28,17 @@
 #pagination li a:focus {
   outline: none;
   box-shadow: none;
+}
+
+#PagesNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+#PagesNav span {
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
 }/*# sourceMappingURL=style.css.map */
