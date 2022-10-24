@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../App";
 import { MovieContext } from "../../App";
 import Filter from "../filter/index";
-
+import PagesNav from "../pagesNav/index";
 const index = () => {
   const { themeValue } = useContext(ThemeContext);
   const {
@@ -30,6 +30,7 @@ const index = () => {
           </h1>
         ) : (
           <>
+            <PagesNav />
             <Filter />
             <div
               className={`
