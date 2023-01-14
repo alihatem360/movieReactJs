@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import useSearch from "../hooks/useSearch";
+import useSearch from "../../hooks/useSearch";
 
 const Filter = () => {
   const { search, handleSearch } = useSearch();

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import unKnwnImage from "../../assets/undraw_netflix_q-00-o.svg";
+
 function index({ product }) {
   const imageUrl = "https://image.tmdb.org/t/p/w500/";
   const { themeValue } = useContext(ThemeContext);

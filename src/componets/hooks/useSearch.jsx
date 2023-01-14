@@ -3,12 +3,11 @@ import React from "react";
 
 import { useState, useEffect, useContext } from "react";
 import { MovieContext } from "../../App";
+
 const useSearch = () => {
   const [search, setSearch] = useState("");
 
-  const { movies, setMovies, page, FilterResult, setFilterResult } =
-    useContext(MovieContext);
-  console.log("Fiter" + FilterResult);
+  const { movies, setFilterResult } = useContext(MovieContext);
   const handleSearch = (e) => {
     setSearch(e);
 

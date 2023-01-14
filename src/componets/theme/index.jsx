@@ -13,25 +13,6 @@ const Theme = () => {
   };
   return (
     <div className="" id="theme">
-      {/* <div className="dropdown">
-        <button
-          className="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          {themeValue}
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li>
-            <a className="dropdown-item" href="#" onClick={handleTheme}>
-              {themeValue === "light" ? "dark" : "light"}
-            </a>
-          </li>
-        </ul>
-      </div> */}
-
       <div className="form-check form-switch">
         <input
           className="form-check-input"

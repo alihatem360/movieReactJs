@@ -1,6 +1,5 @@
-import { React, Fragment, useState, createContext } from "react";
+import { React, createContext } from "react";
 import "./App.css";
-import Navbar from "./componets/nav";
 import RouteComponent from "./componets/rout";
 import { BrowserRouter } from "react-router-dom";
 import useTheme from "./componets/hooks/useTheme";
@@ -10,7 +9,6 @@ export const ThemeContext = createContext();
 export const MovieContext = createContext();
 
 function App() {
-  // const { search, handleSearch, movieResult } = useSearch();
   const { themeValue, setThemeValue } = useTheme();
   const {
     movies,
@@ -23,13 +21,13 @@ function App() {
     setPage,
     FilterResult,
     setFilterResult,
+    pageCounter,
   } = useMoviesData();
 
   return (
-    <Fragment>
+    <>
       <BrowserRouter>
         <ThemeContext.Provider value={{ themeValue, setThemeValue }}>
-          <Navbar />
           <MovieContext.Provider
             value={{
               movies,
@@ -42,13 +40,14 @@ function App() {
               setPage,
               FilterResult,
               setFilterResult,
+              pageCounter,
             }}
           >
             <RouteComponent />
           </MovieContext.Provider>
         </ThemeContext.Provider>
       </BrowserRouter>
-    </Fragment>
+    </>
   );
 }
 
