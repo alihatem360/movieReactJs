@@ -1,8 +1,8 @@
-import ProdctItem from "../productItem/index";
-
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import { MovieContext } from "../../App";
+
+import ProdctItem from "../productItem/index";
 import Filter from "../filter/index";
 import PagesNav from "../pagesNav/index";
 const index = () => {
@@ -16,8 +16,6 @@ const index = () => {
     page,
     FilterResult,
   } = useContext(MovieContext);
-
-  console.log("Filter" + FilterResult);
 
   return (
     <div className={`h-100 ${themeValue === "light" ? "bg-light" : "bg-dark"}`}>
